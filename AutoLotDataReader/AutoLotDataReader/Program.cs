@@ -38,7 +38,11 @@ namespace AutoLotDataReader
                 {
                     while (dbReader.Read())
                     {
-                        WriteLine($"-> Make: {dbReader["Make"]}, PetName: {dbReader["PetName"]}, Color: {dbReader["Color"]}");
+                        for (int i = 0; i < dbReader.FieldCount; i++)
+                        {
+                            WriteLine($"{dbReader.GetName(i)} = {dbReader.GetValue(i)}");
+                        }
+                        WriteLine();
                     }
                 }
             }
