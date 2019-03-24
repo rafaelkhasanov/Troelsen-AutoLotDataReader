@@ -50,7 +50,8 @@ namespace AutoLotDataReader
             WriteLine("Info About connection");
             WriteLine($"Database location: {connection.DataSource}");
             WriteLine($"Database name: {connection.Database}");
-            WriteLine($"Timeout: {connection.ConnectionTimeout}");       
+            WriteLine($"Timeout: {connection.ConnectionTimeout}");
+            WriteLine($"Connection state: {connection.State}");
         }
     }
 }
